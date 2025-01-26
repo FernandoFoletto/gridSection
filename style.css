@@ -1,0 +1,155 @@
+:root{
+
+    /* Primary Colors */
+    --moderateViolent: hsl(263, 55%, 52%);
+    --veryDarkGrayishhBlue: hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Neutral Colors */
+    --lightGray: hsl(0, 0%, 67%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+
+    /* Miscellaneous */
+    --border-radius: 1rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    line-height: 1.4;
+    background-color: var(--lightGrayishBlue);
+    font-family: "Barlow Semi Condensed", serif;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.gridSection{
+    margin: 2rem;
+    max-width: 80rem;;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
+.gridChildren{
+    
+    border-radius: var(--border-radius);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2rem;
+    z-index: 0;
+}
+
+
+.Daniel{
+    color: white;
+    background-color: var(--moderateViolent);
+    grid-area: 1 / 1 / 2 / 3;
+    position: relative;
+}
+
+.profile__mark{
+    position: absolute;
+    z-index: -1;
+    left: 70%;
+    top: 2%;
+    width: 20%;
+    height: auto;
+}
+
+.Jonathan{
+    color: white;
+    background-color: var(--veryDarkGrayishhBlue);
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.Kira{
+    color: var(--VeryDarkBlackishBlue);
+    background-color: var(--white);
+    grid-area: 1 / 4 / 3 / 5;
+}
+
+.Jeanette{
+    color: var(--VeryDarkBlackishBlue);
+    background-color: var(--white);
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.Patrick{
+    color: white;
+    background-color: var(--VeryDarkBlackishBlue);
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+.profile{
+    display: flex;
+    direction: row ;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile__img{
+    border: 1pix solid white;
+    height: 2rem;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profileName__name{
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.profileName__status{
+    font: 500;
+    font-size: 0.7rem;
+}
+
+.gridChildren__title{
+    font-weight: 600;
+
+}
+
+.gridChildren__p{
+    font-weight: 600;
+    padding-top: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--lightGray);
+}
+
+
+@media (max-width: 600px){
+    .gridSection{
+        display: flex;
+        flex-direction: column;
+        width: 22rem;
+    }
+}
+
+
+.attribution{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
